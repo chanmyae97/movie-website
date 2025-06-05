@@ -16,11 +16,13 @@ async function fetchMovies(id) {
 }
 
 export default async function Home({ params }) {
-  const byGenres = await fetchMovies(params.id);
+  const { id, name } = await params;
+  const genreId = id;
+  const byGenres = await fetchMovies(genreId);
 
   return (
     <>
-      <h3 className="font-bold border-b mb-4 pb-2">{params.name}</h3>
+      <h3 className="font-bold border-b mb-4 pb-2">{name}</h3>
       <Moives movies={byGenres.results} />
     </>
   );

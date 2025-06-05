@@ -12,7 +12,9 @@ async function fetchMovies(id) {
 }
 
 export default async function Movie({ params }) {
-  const movie = await fetchMovies(params.id);
+  const { id } = await params;
+  const movieId = id;
+  const movie = await fetchMovies(movieId);
 
   const cover = "http://image.tmdb.org/t/p/w1280";
 
