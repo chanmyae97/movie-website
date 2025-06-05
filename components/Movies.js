@@ -10,7 +10,7 @@ export default function Moives({ movies }) {
           return (
             <div key={movie.id} className="w-[200px] text-center flex-col">
               {movie.poster_path ? (
-                <Link href={`/movie/${movie.id}`}>
+                <Link href={`/movies/${movie.id}`}>
                   <img
                     src={poster + movie.poster_path}
                     className="w-full hover:scale-105 transition-all"
