@@ -19,7 +19,7 @@ export default async function Sidebar() {
   return (
     <aside className="w-[220px] flex flex-col gap-1">
       <Button className="justify-start" variant="outline" asChild>
-        <Link href="/">All Moives</Link>
+        <Link href="/">All Movies</Link>
       </Button>
       {genres.map((genre) => {
         return (
