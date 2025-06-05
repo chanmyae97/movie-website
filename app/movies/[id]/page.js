@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import Persons from "@/components/Persons";
 
 const token = process.env.TMDB_TOKEN;
 
@@ -37,6 +38,10 @@ export default async function Movie({ params }) {
 
       <img src={cover + movie.backdrop_path} />
       <p className="mt-3">{movie.overview}</p>
+      <div className="mt-5">
+        <h3 className="font-bold border-b mb-4 pb-2">Starring</h3>
+        <Persons movie={movie} />
+      </div>
     </>
   );
 }
